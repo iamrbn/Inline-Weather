@@ -1,8 +1,14 @@
-# <img title="OpenWeathermap Symbol" src=https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/android-app-top-banner.png  width="25"> Inline-Weather
+# <img src=https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/android-app-top-banner.png  width="25"> Inline-Weather
 
 [![](https://img.shields.io/badge/Script_Version-Beta_Phase-DB6149.svg?style=plastic)]()
 
-...Comming Soon
+<a href="https://home.openweathermap.org/users/sign_up">
+	<img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" width="100"/>
+</a>
+
+First of all, you need an API-key by OpenWeather out of your [account](https://home.openweathermap.org/api_keys "https://home.openweathermap.org/api_keys"). If you doesn't have an account, click [here](https://home.openweathermap.org/users/sign_up "https://home.openweathermap.org/users/sign_up") to sign up.
+
+... More details comming soon :)
 
 ___
 
