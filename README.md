@@ -23,15 +23,17 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Detailview of each day
 
 #### Selfupdate Function
-The Script update itself[^1]
+The Script updates itself[^1]
 
 ## Config
 #### Script
 ``` Javascript
 const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial' units are available.
-const unitSymb = '°'
+const unitSymb = '°' //Celsius
 const unitSpeed = 'km/h'
 const language = 'de' //learn more: https://openweathermap.org/current#multi
+const apiKey = 'YOUR API KEY GOES HERE'
+const standardParameter = '30;current'
 ```
 #### Widget Parameter
 Default value if null: `30;current`
