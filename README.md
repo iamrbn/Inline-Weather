@@ -1,14 +1,42 @@
 # <img src=https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/android-app-top-banner.png  width="25"> Inline-Weather
 
-[![](https://img.shields.io/badge/Script_Version-Beta_Phase-DB6149.svg?style=plastic)]()
+[![](https://img.shields.io/badge/Script_Version-1.0-DB6149.svg?style=plastic)]()
+
+Script which shows weather datas about the openweathermap api in [Scriptable for iOS](https://scriptable.app/ "App Homepage") lockscreen widgets.
 
 <a href="https://home.openweathermap.org/users/sign_up">
 	<img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" width="100"/>
 </a>
 
-First of all, you need an API-key by OpenWeather out of your [account](https://home.openweathermap.org/api_keys "https://home.openweathermap.org/api_keys"). If you doesn't have an account, click [here](https://home.openweathermap.org/users/sign_up "https://home.openweathermap.org/users/sign_up") to sign up.
+First of all, you need an API-key by OpenWeather out of your [account](https://home.openweathermap.org/api_keys "https://home.openweathermap.org/api_keys"). If you doesn't have an accountone, click [here](https://home.openweathermap.org/users/sign_up "https://home.openweathermap.org/users/sign_up") to sign up.
 
-... More details comming soon :)
+
+## Features
+#### Widget Sizes (Lockscreen)
+- Inline
+- Circular
+- Rectangular (Current & Forecast)
+
+#### Tabel View (In App)
+- Today & Forecast
+- Clickable rows
+- Detailview of each day
+
+#### Selfupdate Function
+The Script update itself[^1]
+
+## Config
+#### Script
+``` Javascript
+const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial' units are available.
+const unitSymb = '°'
+const unitSpeed = 'km/h'
+const language = 'de' //learn more: https://openweathermap.org/current#multi
+```
+#### Widget Parameter
+Default value if null: `30;current`
+The number at the beginning means the refresh intervall of the widget.
+The second value controls which datas will be shown (current or forecast)
 
 ___
 
@@ -25,3 +53,5 @@ ___
 </p>
 
 <br>
+
+[^1]:[Function](https://github.com/mvan231/Scriptable#updater-mechanism-code-example "GitHub Repo") is written by the amazing [@mvan231](https://twitter.com/mvan231 "Twitter")
