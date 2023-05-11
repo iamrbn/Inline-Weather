@@ -1,6 +1,6 @@
 # <img src=https://openweathermap.org/themes/openweathermap/assets/img/mobile_app/android-app-top-banner.png  width="25"> Inline-Weather
 
-[![](https://img.shields.io/badge/Script_Version-1.0-DB6149.svg?style=plastic)]()
+![](https://img.shields.io/badge/dynamic/json?color=EF7150&style=plastic&label=Script%20Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamrbn%2FInline-Weather%2Fmain%2FInline-Weather.json "Hi there 👋 I'm always up to date")
 
 Script which shows weather datas about the openweathermap api in [Scriptable for iOS](https://scriptable.app/ "App Homepage") lockscreen widgets.
 
@@ -17,7 +17,7 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Circular (current)
 - Rectangular (Forecast)
 
-<img title="Available Lockscreen Widgets" src="Images/lockscreen_cropped.PNG" width="750"/>
+<img title="Available Lockscreen Widgets" src="Images/lockscreen_cropped.PNG" width="500"/>
 
 
 #### Tabel View (In App)
@@ -28,8 +28,8 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Quick access to this GitHub Repo
 
 <img title="Table Features" src="Images/thumbnail.png" width="650"/>
-<img title="Detail Table View" src="Images/detail_table_view.jpeg" width="500"/>
-<img title="CityID Dialog" src="Images/cityID_dialog.PNG" width="500"/>
+<img title="Detail Table View" src="Images/detail_table_view.jpeg" width="350"/>
+<img title="CityID Dialog" src="Images/cityID_dialog.PNG" width="350"/>
 
 #### Selfupdate Function
 The Script updates itself[^1]
