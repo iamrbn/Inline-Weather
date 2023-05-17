@@ -12,20 +12,20 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 
 
 ## Features
-#### Widget Sizes (Lockscreen)
-- Inline (current)
-- Circular (current)
+#### Available Widget Sizes (Lockscreen)
+- Inline (current weather)
+- Circular (current weather)
 - Rectangular (Forecast)
 
 <img title="Available Lockscreen Widgets" src="Images/lockscreen_cropped.PNG" width="500"/>
 
 
 #### Tabel View (In App)
-- Today & Forecast
+- Current & Forecast
 - Clickable rows
 - Detailview of each day
-- Dialog that shows the city ID
-- Quick access to this GitHub Repo
+- Dialog, that shows the city ID
+- Quick access to this GitHub Repo in the footer
 
 <img title="Table Features" src="Images/thumbnail.png" width="650"/>
 <img title="Detail Table View" src="Images/detail_table_view.jpeg" width="350"/>
@@ -51,10 +51,10 @@ The second value controls which datas will be shown (current or forecast)
 
 ---
 ### Next Updte
-- Rectangular with current weather datas
+- Rectangular with current weather datas ...maybe. we‘ll see...
 
 ### Known Issues
-- Sometimes the widgets shows a error message
+- Sometimes the widgets shows a error message `Error: The operation couldn‘t be completed.(kCLEr...`
 
 ___
 
