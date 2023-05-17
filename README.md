@@ -35,7 +35,7 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 The Script updates itself[^1]
 
 ## Config
-#### Script
+#### Script Parameter
 ``` Javascript
 const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial' units are available.
 const unitSymb = '°' //Celsius
@@ -50,7 +50,7 @@ The number at the beginning means the refresh intervall of the widget.
 The second value controls which datas will be shown (current or forecast)
 
 ---
-### Next Updte
+### Next Update
 - Rectangular with current weather datas ...maybe. we‘ll see...
 
 ### Known Issues
