@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/dynamic/json?color=EF7150&style=plastic&label=Script%20Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamrbn%2FInline-Weather%2Fmain%2FInline-Weather.json "Hi there 👋 I'm always up to date")
 
-Script which shows weather datas about the openweathermap api in [Scriptable for iOS](https://scriptable.app/ "App Homepage") lockscreen widgets.
+Script which shows weather datas from the openweathermap-api in [Scriptable for iOS](https://scriptable.app/ "App Homepage") in the lockscreen-widgets.
 
 <a href="https://home.openweathermap.org/users/sign_up">
 	<img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" width="100"/>
