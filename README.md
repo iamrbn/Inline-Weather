@@ -50,13 +50,6 @@ The number at the beginning means the refresh intervall of the widget.
 The second value controls which datas will be shown (current or forecast)
 
 ---
-### Next Update
-- Rectangular with current weather datas ...maybe. we‘ll see...
-
-### Known Issues
-- Sometimes the widgets shows a error message `Error: The operation couldn‘t be completed.(kCLEr...`
-
-___
 
 <p align="center">
   <a href="https://reddit.com/user/iamrbn/">
