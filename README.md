@@ -15,7 +15,7 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 #### Available Widget Sizes (Lockscreen)
 - Inline (current weather)
 - Circular (current weather)
-- Rectangular (Forecast)
+- Rectangular (current & forecast)
 
 <img title="Available Lockscreen Widgets" src="Images/lockscreen_cropped.PNG" width="500"/>
 
