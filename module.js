@@ -1,3 +1,8 @@
+//=======================================//
+//==========START OF MODUL ================//
+//=========================================//
+
+
 let iconsID = {
   //thunderstorm
   200: "cloud.bolt.rain.fill",
@@ -55,7 +60,7 @@ let iconsID = {
   771: "sun.haze.fill",
   781: "tornado",
   //clear
-  800: "sun.max.fill" || "moon.stars.fill",
+  800: "sun.max.fill" ||Â "moon.stars.fill",
   //clouds
   801: "cloud.sun.fill",
   802: "cloud.fill",
@@ -63,25 +68,20 @@ let iconsID = {
   804: "smoke.fill"
  };
 
-module.exports.getSF = (key, icon) => {
-    sfName = iconsID[key]
-     if (icon.includes("n") && sfName.includes("sun")) sfName = sfName.replace("sun", "moon")
-     if (key === 800 && icon.includes("n")) sfName = "moon.stars.fill"
-     if (key === 731 && icon.includes("n")) sfName = "moon.haze.fill"
-  return sfName
-};
-
-module.exports.calcWindDirection = (idx) => {
-    degrees = data.daily[idx].wind_deg
+    
+module.exports.calcWindDirection = (data, idx) => {
+    degrees =  data.daily[idx].wind_deg
     directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-    degrees = degrees * 8 / 360; // Split into the 8 directions
-    degrees = Math.round(degrees, 0); // round to nearest integer.
-    degrees = (degrees + 8) % 8; // Ensure it's within 0-7
+    degrees = degrees * 8 / 360 // Split into the 8 directions
+    degrees = Math.round(degrees, 0) // round to nearest integer.
+    degrees = (degrees + 8) % 8 // Ensure it's within 0-7
  return directions[degrees]
 };
 
-module.exports.calcMoonPhase = (idx) => {
+
+module.exports.calcMoonPhase = (data, idx) => {
    /*
+   data.daily[idx].moon_phase
   0 and 1 are 'new moon',
   0.25 is 'first quarter moon',
   0.5 is 'full moon'
@@ -99,26 +99,41 @@ module.exports.calcMoonPhase = (idx) => {
  return [symb, name]
 };
 
-module.exports.calcTemp = (temp) => {
- return Math.round(temp)
+
+module.exports.getSF = (key, icon) => {
+    sfName = iconsID[key]
+     if (icon.includes("n") && sfName.includes("sun")) sfName = sfName.replace("sun", "moon")
+     if (key === 800 && icon.includes("n")) sfName = "moon.stars.fill"
+     if (key === 731 && icon.includes("n")) sfName = "moon.haze.fill"
+  return sfName
 };
 
-module.exports.calcTime = (timestamp) => {
-  df = new DateFormatter()
+
+module.exports.calcTemp = (temp) => {
+return Math.round(temp)
+};
+
+
+module.exports.calcTime = (df, timestamp) => {
   df.dateFormat = 'HH:mm:ss'
   df.useShortTimeStyle()
   calc = 1000*60*1//60.000
  return df.string(new Date(Math.round(timestamp*1000/calc)*calc))
 };
 
-module.exports.calcDate = (timestamp, format) => {
-    df = new DateFormatter()
+
+module.exports.calcDate = (df, timestamp, format) => {
     df.dateFormat = format//stays for the day name
  return df.string(new Date(timestamp*1000))
 };
+
 
 module.exports.loadIcon = (name) => {
       symbol = new Request(`https://openweathermap.org/img/wn/${name}@2x.png`).loadImage()
       symbol.size = new Size(40, 40)
 return symbol
 };
+
+//=========================================//
+//============== END OF MODUL =============//
+//=========================================//
