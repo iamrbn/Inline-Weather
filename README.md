@@ -54,7 +54,7 @@ The second value controls which datas will be shown (current or forecast)
 The Script updates itself[^1]
 
 ### On the first run
-It downloads a module and saves it in the "Inline Weather" directory.
+It downloads a module from this github repo and saves it in the "Inline Weather" directory.
 ```
 iCloud Drive/
 ├─ Scriptable/
