@@ -170,13 +170,7 @@ return cityName
 module.exports.updateCheck = async (fm, modulePath, version) => {
   let url = 'https://raw.githubusercontent.com/iamrbn/Inline-Weather/main/'
   let endpoints = ['Inline-Weather.js', 'module.js']
-  
-  if (!fm.fileExists(modulePath)){
-    req = new Request(url+endpoints[1])
-    moduleFile = await req.loadString()
-    fm.writeString(modulePath, moduleFile)
-    console.warn('loaded modul.js file from github')
-  }
+
     let uC;
     try {
       updateCheck = new Request(url+endpoints[0]+'on')
