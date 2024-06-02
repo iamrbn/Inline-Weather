@@ -68,7 +68,18 @@ let iconsID = {
   804: "smoke.fill"
  };
 
-    
+
+module.exports.getFromAPI = async (apiURL) => {
+  let data;
+  try {
+    data = await new Request(apiURL).loadJSON()
+  } catch (error){
+    console.error("ERROR:\n" + JSON.stringify(error))
+  }
+  return data
+};
+
+
 module.exports.calcWindDirection = (data, idx) => {
     degrees =  data.daily[idx].wind_deg
     directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
@@ -109,6 +120,16 @@ module.exports.getSF = (key, icon) => {
 };
 
 
+module.exports.sfSymbol = (name, color, size) => {
+  sf = SFSymbol.named(name)
+  sf.applyFont(Font.regularMonospacedSystemFont(size))
+  sf.applyRegularWeight()
+  sf.tintColor = new Color(color)//hex
+  sf.imageSize = new Size(size, size)
+ return sf.image
+};
+
+
 module.exports.calcTemp = (temp) => {
 return Math.round(temp)
 };
@@ -133,6 +154,64 @@ module.exports.loadIcon = (name) => {
       symbol.size = new Size(40, 40)
 return symbol
 };
+
+
+module.exports.replaceUmlauts = (name) => {
+cityName = name.toLowerCase()
+cityName = cityName.replace(/ä/g, 'ae')
+cityName = cityName.replace(/ö/g, 'oe')
+cityName = cityName.replace(/ü/g, 'ue')
+cityName = cityName.replace(/ß/g, 'ss')
+return cityName
+};
+
+
+//Checks if's there an server update on GitHub available
+module.exports.updateCheck = async (fm, modulePath, version) => {
+  let url = 'https://raw.githubusercontent.com/iamrbn/Inline-Weather/main/'
+  let endpoints = ['Inline-Weather.js', 'module.js']
+  
+  if (!fm.fileExists(modulePath)){
+    req = new Request(url+endpoints[1])
+    moduleFile = await req.loadString()
+    fm.writeString(modulePath, moduleFile)
+    console.warn('loaded modul.js file from github')
+  }
+    let uC;
+    try {
+      updateCheck = new Request(url+endpoints[0]+'on')
+      uC = await updateCheck.loadJSON()
+    } catch (e){
+        return log(e)
+        }
+
+  needUpdate = false
+  if (uC.version > version){
+     needUpdate = true
+    if (config.runsInApp){
+      //console.error(`New Server Version ${uC.version} Available`)
+      let newAlert = new Alert()
+          newAlert.title = `New Server Version ${uC.version} Available!`
+          newAlert.addAction("OK")
+          newAlert.addDestructiveAction("Later")
+          newAlert.message="Changes:\n" + uC.notes + "\n\nOK starts the download from GitHub\n More informations about the update changes go to the GitHub Repo"
+      if (await newAlert.present() == 0){
+        reqCode = new Request(url+endpoints[0])
+        updatedCode = await reqCode.loadString()
+        pathCode = fm.joinPath(fm.documentsDirectory(), `${Script.name()}.js`)
+        fm.writeString(pathCode, updatedCode)
+        reqModule = new Request(url+endpoints[1])
+        moduleFile = await reqModule.loadString()
+        fm.writeString(modulePath, moduleFile)
+        throw new Error("Update Complete!")
+      }
+    }
+  } else {
+      log(">> SCRIPT IS UP TO DATE!")
+      }
+  return {uC, needUpdate}
+};
+
 
 //=========================================//
 //============== END OF MODULE ============//
