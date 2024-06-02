@@ -17,8 +17,8 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Circular (current weather)
 - Rectangular (current & forecast)
 
-<img title="Available Lockscreen Widgets" src="Images/lockscreen_cropped.PNG" width="500"/>
-
+<img title="Available Lockscreen Widgets" src="lockscreenWidgets1.PNG" width="400"/>
+<img title="Available Lockscreen Widgets" src="lockscreenWidgets2.PNG" width="400"/>
 
 #### Tabel View (In App)
 - Current & Forecast
@@ -27,14 +27,14 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Dialog, that shows the city ID
 - Quick access to this GitHub Repo in the footer
 
-<img title="Table Features" src="Images/thumbnail.png" width="650"/>
-<img title="Detail Table View" src="Images/detail_table_view.jpeg" width="350"/>
-<img title="CityID Dialog" src="Images/cityID_dialog.PNG" width="350"/>
+<img title="Table Features" src="Images/thumbnail.PNG" width="650"/>
+<img title="Detail Table View" src="Images/detailView.PNG" width="350"/>
+<img title="CityID Dialog" src="Images/changeLocation.PNG" width="350"/>
 
-#### Selfupdate Function
-The Script updates itself[^1]
+
 
 ## Config
+
 #### Script Parameter
 ``` Javascript
 const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial' units are available.
@@ -44,10 +44,24 @@ const language = 'de' //learn more: https://openweathermap.org/current#multi
 const apiKey = 'YOUR API KEY GOES HERE'
 const standardParameter = '30;current'
 ```
+
 #### Widget Parameter
 Default value if null: `30;current`
 The number at the beginning means the refresh intervall of the widget.
 The second value controls which datas will be shown (current or forecast)
+
+### Selfupdate Function
+The Script updates itself[^1]
+
+### On the first run
+It downloads a module and saves it in the "Inline Weather" directory.
+```
+iCloud Drive/
+├─ Scriptable/
+│  ├─ Inline Weather/
+│  │  ├─ module.js
+```
+
 
 ---
 
