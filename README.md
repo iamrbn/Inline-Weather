@@ -20,7 +20,7 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 <img title="Available Lockscreen Widgets 1" src="Images/lockscreenWidgets1.PNG" width="400"/>
 <img title="Available Lockscreen Widgets 2" src="Images/lockscreenWidgets2.PNG" width="400"/>
 
-#### Tabel View (In App)
+### Tabel View (In App)
 - Current & Forecast
 - Clickable rows
 - Detailview of each day
@@ -28,7 +28,11 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Quick access to this GitHub Repo in the footer
 
 <img title="Table Features" src="Images/thumbnail.PNG" width="650"/>
+
+#### Detailview
 <img title="Detail Table View" src="Images/detailView.PNG" width="350"/>
+
+#### Change Location
 <img title="CityID Dialog" src="Images/changeLocation.PNG" width="350"/>
 
 
