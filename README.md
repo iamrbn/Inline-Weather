@@ -17,8 +17,7 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Circular (current weather)
 - Rectangular (current & forecast)
 
-<img title="Available Lockscreen Widgets 1" src="Images/lockscreenWidgets1.PNG" width="400"/>
-<img title="Available Lockscreen Widgets 2" src="Images/lockscreenWidgets2.PNG" width="400"/>
+<img title="Available Lockscreen Widgets 1" src="Images/lockscreenMockup.png" width="1000"/>
 
 ### Tabel View (In App)
 - Current & Forecast
