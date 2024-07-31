@@ -6,8 +6,9 @@ Script which shows weather datas from the openweathermap-api in [Scriptable for 
 
 ### ATTENTION!
 The script uses the API v2.5 endpoint. If you generated your API-key after June 2024, an error occurs.  
-<img title="error message" src="https://preview.redd.it/inline-weather-widgets-v0-rhe30gkw88fd1.jpeg" width="250"/>   
+<img title="error message" src="https://preview.redd.it/inline-weather-widgets-v0-rhe30gkw88fd1.jpeg?width=512&format=pjpg&auto=webp&s=071eea146abc151a38284fb667cbe46147808775" width="250"/>   
 Because openweathermap has changed its pricing models. I'm try to switch the endpoint or find another solution.
+
 
 
 <a href="https://home.openweathermap.org/users/sign_up">
