@@ -4,8 +4,11 @@
 
 Script which shows weather datas from the openweathermap-api in [Scriptable for iOS](https://scriptable.app/ "App Homepage") in the lockscreen-widgets.
 
-## ATTENTION: The script uses the API v2.5 endpoint. If you generated your API-key after June 2024, an error occurs. Because openweathermap has changed its pricing models. I'm try to switch the endpoint or find another solution. 
+### ATTENTION!
+The script uses the API v2.5 endpoint. If you generated your API-key after June 2024, an error occurs.  
 <img src="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Finline-weather-widgets-v0-rhe30gkw88fd1.jpeg%3Fwidth%3D512%26format%3Dpjpg%26auto%3Dwebp%26s%3D071eea146abc151a38284fb667cbe46147808775" width="300" title="error message"/>
+Because openweathermap has changed its pricing models. I'm try to switch the endpoint or find another solution.
+
 
 
 <a href="https://home.openweathermap.org/users/sign_up">
