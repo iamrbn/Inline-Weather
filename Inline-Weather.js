@@ -3,23 +3,25 @@
 // icon-color: yellow; icon-glyph: sun;
 
 //+++++++++++ START CONFIG AREA +++++++++++++++
+
 const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial' units are available.
 const unitSymb = '°' //Celsius
 const unitSpeed = 'km/h'
 const language = 'de' //learn more: https://openweathermap.org/current#multi
 const apiKey = "YOUR API KEY GOES HERE"
-const standardParameter = "30;current"//Refresh Intervall; Weather-Datas (current or forecast)
-//+++++++++++++ END CONFIG AREA ++++++++++++++
+const standardParameter = "60;current"//Refresh Intervall; Weather-Datas (current or forecast)
+
+//++++++++++++++ END CONFIG AREA +++++++++++++
 
 let df = new DateFormatter()
 let fm = FileManager.iCloud()
 let dir = fm.joinPath(fm.documentsDirectory(), 'Inline Weather')
 if (!fm.fileExists(dir)) fm.createDirectory(dir)
 let modulePath = fm.joinPath(dir, "module.js")
-if (!fm.fileExists(modulePath))await loadModule()
+if (!fm.fileExists(modulePath)) await loadModule()
 fm.downloadFileFromiCloud(modulePath)
 let module = importModule('Inline Weather/module')
-let uCheck = await module.updateCheck(fm, modulePath, 1.0)
+let uCheck = await module.updateCheck(fm, modulePath, 1.1)
 let wSize = config.widgetFamily
 let wParameter = await args.widgetParameter
 if (wParameter == null || wParameter.length <= 3) wParameter = standardParameter
@@ -27,10 +29,13 @@ let refreshInt = wParameter.match(/\d/g).join("")
 let wContent =  wParameter.match(/[a-zA-Z]/g).join("")
 
 Location.setAccuracyToHundredMeters()
+//Location.setAccuracyToKilometer() //macOS
 let location = await Location.current()
-let data = await module.getFromAPI(`https://api.openweathermap.org/data/2.5/onecall?lat=${ location.latitude }&lon=${ location.longitude }&exclude=minutely,hourly&units=${ unit }&lang=${ language }&appid=${ apiKey }`)
+    
+
+let data = await module.getFromAPI(`https://api.openweathermap.org/data/3.0/onecall?lat=${ location.latitude }&lon=${ location.longitude }&exclude=minutely,hourly&units=${ unit }&lang=${ language }&appid=${ apiKey }`)
 //console.log(JSON.stringify(data, null, 2))
-//log(`https://api.openweathermap.org/data/2.5/onecall?lat=${ location.latitude }&lon=${ location.longitude }&exclude=minutely,hourly&units=metric&lang=de&appid=${ apiKey }`)
+//log(`https://api.openweathermap.org/data/3.0/onecall?lat=${ location.latitude }&lon=${ location.longitude }&exclude=minutely,hourly&units=metric&lang=de&appid=${ apiKey }`)
 
 if (config.runsInAccessoryWidget || config.runsInWidget){
  switch(wSize){
@@ -51,7 +56,7 @@ async function createInline(){
 	let w = new ListWidget()
 	    w.refreshAfterDate = new Date(Date.now()+1000*60*refreshInt)
 	let stck = w.addStack()
-	await createHorizontallyStack(
+   await createHorizontallyStack(
     module.getSF(data.current.weather[0].id, data.current.weather[0].icon),
     18,
     stck,
@@ -59,6 +64,7 @@ async function createInline(){
     module.calcTemp(data.current.temp) + unitSymb + ' ↑' + module.calcTemp(data.daily[0].temp.max) + '↓' + module.calcTemp(data.daily[0].temp.min) + ' ⇣' + Math.round(data.daily[0].pop * 100 / 1) + '%',
     10
     )
+
   return w
 };
 
@@ -85,8 +91,9 @@ async function createCircular(){
       topStack.addSpacer()
       
   let txt = topStack.addText(module.calcTemp(data.current.temp)+unitSymb)
-      txt.font = Font.regularSystemFont(17)
+      txt.font = Font.regularSystemFont(16)
       txt.leftAlignText()
+      txt.minimumScaleFactor = 0.7
       topStack.addSpacer(2)
       //txt.minimumScaleFactor = 0.8
   let img = topStack.addImage(sf.image)
@@ -116,7 +123,7 @@ async function createCircular(){
       bottomStack.addSpacer()
       
   let desc2 = bottomStack.addText('⇣' + data.daily[0].pop*100/1 + '%')
-      desc2.font = Font.lightSystemFont(12)
+      desc2.font = Font.lightSystemFont(11)
       desc2.lineLimit = 1
       desc2.minimumScaleFactor = 0.8
       desc2.centerAlignText()
@@ -494,6 +501,7 @@ async function loadModule(){
    fm.writeString(modulePath, moduleFile)
    console.warn('loaded modul.js file from github')
 };
+
 
 //====================================================
 // ------------------- END OF SCRIPT -----------------
