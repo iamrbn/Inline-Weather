@@ -49,9 +49,15 @@ const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial
 const unitSymb = '°' //Celsius
 const unitSpeed = 'km/h'
 const language = 'de' //learn more: https://openweathermap.org/current#multi
-const apiKey = 'YOUR API KEY GOES HERE'
 const standardParameter = '30;current'
 ```
+
+#### Your API-Key
+The script asks you at the first run for your openweathermap API-Key.
+It saves it in the 'Inline Weather' Directory at the Scriptable iCloud Folder as JSON file.
+So it wont go lost after script updates.     
+<img title="Dialogue" src="Images/askForAPIKey.png" width="350"/>
+
 
 #### Widget Parameter
 Default value if null: `30;current`
@@ -68,6 +74,8 @@ iCloud Drive/
 ├─ Scriptable/
 │  ├─ Inline Weather/
 │  │  ├─ module.js
+------------------
+│  │  ├─ apiKey.json <-- your successfully saved API-Key
 ```
 
 
