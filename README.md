@@ -32,12 +32,14 @@ Because openweathermap is shutting down version 2.5 on Oct. 14.
 
 <img title="Table Features" src="Images/thumbnail.png" width="777"/>
 
-#### Detailview
+#### Detailed iew of a specific day:
 <img title="Detail Table View" src="Images/detailView.png" width="450"/>
 
-#### Change Location
+#### Change your location:
 <img title="Change Location" src="Images/changeLocation.png" width="450"/>
 
+#### Weather alerts in your area:
+<img title="Alert If Available" src="Images/weatherAlertPopUp.png" width="450"/>
 
 
 ## Config
