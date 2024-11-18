@@ -43,6 +43,11 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 
 ## Config
 
+#### Widget Parameter
+Default value if null: `30;current`
+The number at the beginning means the refresh intervall of the widget.
+The second value controls which datas will be shown (current or forecast)
+
 #### Script Parameter
 ``` Javascript
 const unit = 'metric' //Units of measurement: 'standard', 'metric' and 'imperial' units are available.
@@ -58,11 +63,12 @@ It saves it in the 'Inline Weather' Directory at the Scriptable iCloud Folder as
 So it wont go lost after script updates.     
 <img title="Dialogue" src="Images/askForAPIKey.png" width="350"/>
 
+___
 
-#### Widget Parameter
-Default value if null: `30;current`
-The number at the beginning means the refresh intervall of the widget.
-The second value controls which datas will be shown (current or forecast)
+#### Info Widget
+The info widgets show existing errors. For example, if there is no internet connection or the API key is incorrect.
+<img title="Dialogue" src="Images/infoWidgets.png" width="450"/>
+
 
 ### Selfupdate Function
 The Script updates itself[^1]
