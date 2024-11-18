@@ -4,16 +4,15 @@
 
 Script which shows weather datas from the openweathermap-api in [Scriptable for iOS](https://scriptable.app/ "App Homepage") in the lockscreen-widgets.
 
-### ATTENTION!
-The current script version (`1.1`) uses now the API v3.0 endpoint.
-Because openweathermap is shutting down version 2.5 on Oct. 14.
-
-
 <a href="https://home.openweathermap.org/users/sign_up">
 	<img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" width="100"/>
 </a>
 
 First of all, you need an API-key by OpenWeather out of your [account](https://home.openweathermap.org/api_keys "https://home.openweathermap.org/api_keys"). If you doesn't have an accountone, click [here](https://home.openweathermap.org/users/sign_up "https://home.openweathermap.org/users/sign_up") to sign up.
+
+#### ATTENTION!
+The current script version (`1.1`) uses now the API v3.0 endpoint.
+Because openweathermap is shutting down version 2.5 on Oct. 14.
 
 
 ## Features
@@ -31,13 +30,13 @@ First of all, you need an API-key by OpenWeather out of your [account](https://h
 - Dialog, that shows the city ID
 - Quick access to this GitHub Repo in the footer
 
-<img title="Table Features" src="Images/thumbnail.PNG" width="650"/>
+<img title="Table Features" src="Images/thumbnail.png" width="777"/>
 
 #### Detailview
-<img title="Detail Table View" src="Images/detailView.PNG" width="350"/>
+<img title="Detail Table View" src="Images/detailView.png" width="450"/>
 
 #### Change Location
-<img title="CityID Dialog" src="Images/changeLocation.PNG" width="350"/>
+<img title="Change Location" src="Images/changeLocation.png" width="450"/>
 
 
 
@@ -61,14 +60,13 @@ const standardParameter = '30;current'
 The script asks you at the first run for your openweathermap API-Key.
 It saves it in the 'Inline Weather' Directory at the Scriptable iCloud Folder as JSON file.
 So it wont go lost after script updates.     
-<img title="Dialogue" src="Images/askForAPIKey.png" width="350"/>
+<img title="Dialogue" src="Images/askForAPIKey.png" width="450"/>
 
 ___
 
-#### Info Widget
+### Info Widget
 The info widgets show existing errors. For example, if there is no internet connection or the API key is incorrect.
-<img title="Dialogue" src="Images/infoWidgets.png" width="450"/>
-
+<img title="Dialogue" src="Images/infoWidgets.png" width="650"/>
 
 ### Selfupdate Function
 The Script updates itself[^1]
