@@ -1,4 +1,4 @@
 {
-    "version": 1.1,
-    "notes":"Update of the API request to version 3.0 as openweathermap is shutting down version 2.5 on Oct. 14."
+    "version": 1.2,
+    "notes":"• The script now saves your API-Key as a json file in the script folder\n• Added multible error widgets\n• Latest code improvements due to the api change of openweathermap\n• Small code improvements (script & module)"
 }
