@@ -11,8 +11,9 @@ Script which shows weather datas from the openweathermap-api in [Scriptable for 
 First of all, you need an API-key by OpenWeather out of your [account](https://home.openweathermap.org/api_keys "https://home.openweathermap.org/api_keys"). If you doesn't have an accountone, click [here](https://home.openweathermap.org/users/sign_up "https://home.openweathermap.org/users/sign_up") to sign up.
 
 #### ATTENTION!
-The current script version (`1.1`) uses now the API v3.0 endpoint.
+The current script version (`1.1+`) uses now the API v3.0 endpoint.
 Because openweathermap is shutting down version 2.5 on Oct. 14.
+https://openweathermap.org/one-call-transfer
 
 
 ## Features
